@@ -4,11 +4,6 @@ Created on Mon Oct 32 13:51:53 2024
 
 @author: ecastro
 
-All the thermodynamic data is taken from the following publication
-
-Zhang, L., Ren, Y., Duan, H., Yang, W., & Sun, L. (2015). 
-Stability diagram of Mg-Al-O system inclusions in molten steel. 
-Metallurgical and Materials Transactions B, 46(4), 1809-1825.
 """
 
 
