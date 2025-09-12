@@ -8,7 +8,7 @@ Curso con duración de 3 días (9 horas)
 
 # Temario:
 
-## Día 1:
+## Modulo 00:
 
 1. Requisitos para el curso
     1. Visual Studio Code
@@ -40,7 +40,7 @@ Curso con duración de 3 días (9 horas)
     8. Gráficos de contornos
     9. Referencias / Documentación
   
-## Día 2
+## Modulo 01
 
 1. Fundamentos de desoxidación
     1. Reacción de desoxidación general
@@ -71,7 +71,7 @@ Curso con duración de 3 días (9 horas)
     6. Referencias
 
 
-## Día 3
+## Modulo 02
 
 1. Capacidad de sulfuro
     1. Concepto general
@@ -97,3 +97,21 @@ Curso con duración de 3 días (9 horas)
     3. Refinación del modelo
     4. Utilización del modelo refinado
     5. Referencias
+
+
+## Modulo 03
+
+1. Estadística de Valores Extremos
+    1. Contexto metalúrgico.
+    2. Fundamentos de análisis de valores extremos
+    3. Referencias
+
+2. Gráficos de Gumbel
+    1. Contexto metalúrgico
+    2. Gráfico de Gumbel
+    3. Referencias
+
+3. Aplicaciones en Inclusiones No Metálicas
+    1. Contexto metalúrgico
+    2. Ejemplo de aplicación
+    3. Referencias
