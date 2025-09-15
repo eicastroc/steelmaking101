@@ -115,7 +115,7 @@ def mSlagEq(Ls: float, wS0: float, wS: float) -> float:
 
 
 #%%#####################################################################
-def desulfRate(t:float, wS:float, c:float) -> float:
+def desulfRateLegacy(t:float, wS:float, c:float) -> float:
     """
     Desulfurization rate differential equation
     taking into account uptake of sulfur by the slag
@@ -141,6 +141,32 @@ def desulfRate(t:float, wS:float, c:float) -> float:
     dwSdt = -ks * (wS * (1 + 1/Y) - wS0/Y)
     return dwSdt
 
+
+#%%#####################################################################
+def desulfRate(t:float, wS:float, ks, wS0, Msl, Ls) -> float:
+    """
+    Desulfurization rate differential equation
+    taking into account uptake of sulfur by the slag
+    
+    Parameters
+    ----------
+    t : Float
+        time, in [s]
+    wS: Float
+        sulfur content, in [wt%]
+    c:  tupple with Floats
+        ks: desulfurization rate constant, in [1/s]
+        ws0: initial sulfur content in metal, in [wt%]
+        Msl: kg of slag per ton of metal, in [kg/ton]
+        Ls: sulfur partition coeficient, Ls=(%S)/[%S]
+    Returns
+    -------
+    dwSdt : float
+        Desulfurization rate, in [[%S]/s]
+    """
+    Y = Msl/1000 * Ls
+    dwSdt = -ks * (wS * (1 + 1/Y) - wS0/Y)
+    return dwSdt
 
 #%%#####################################################################
 def opticalBasicity(slagComp: dict, T: float) -> float:
@@ -189,7 +215,7 @@ def opticalBasicity(slagComp: dict, T: float) -> float:
 
 
 #%%#####################################################################
-def logCs(slagComp:dict, T:float)-> float:
+def logCs(lam:float, T:float)-> float:
     """
     calculation of sulfide capacity, according to:
     
@@ -201,11 +227,8 @@ def logCs(slagComp:dict, T:float)-> float:
     
     Parameters
     ----------
-    slagComp : dict
-        Dictionary with slag composition, a valid entry is:
-            
-            slagComp = {'Al2O3': 9,'CaO': 56, 'MgO': 8, 'SiO2': 25, 'FeO': 1, 'MnO': 1}
-            
+    lam : Float
+        Optical basicity.
     T : Float
         Temperature, in [K].
         
@@ -215,8 +238,7 @@ def logCs(slagComp:dict, T:float)-> float:
         logarithm base 10 of sulfide capacity, Cs
     """    
     
-    lamb = opticalBasicity(slagComp, T)
-    return -6.08 + 4.49/lamb + (15893 - 15864/lamb)/T
+    return -6.08 + 4.49/lam + (15893 - 15864/lam)/T
 
 
 #%%#####################################################################
