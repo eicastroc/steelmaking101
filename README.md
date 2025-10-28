@@ -9,4 +9,4 @@ This repository contains a series of examples
 where basic python scripts are used for studying
 basic steelmaking theory.
 
-The material will be available in spanish and english.
+In the future, all the material will be available in spanish and english.
