@@ -114,3 +114,16 @@
     1. Contexto metalúrgico
     2. Ejemplo de aplicación
     3. Referencias
+
+
+## Modulo 04
+
+1. Método entálpico para problemas de transferencia de calor
+    1. Contexto metalúrgico
+    2. Fundamentos método entálpico
+    3. Método entálpico vs método Cp
+    4. Obtención de otros datos termodinámicos
+
+2. Aplicaciones con modelo de capacitancia agrupada
+    1. Modelo de capacitancia agrupada
+    2. Implementación en Python
